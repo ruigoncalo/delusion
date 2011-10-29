@@ -29,6 +29,7 @@ module Delusion
     config.to_prepare do
       Devise::SessionsController.layout "sign"
       Devise::RegistrationsController.layout "sign"
+      Devise::PasswordsController.layout "sign"
     end   
   end
 end

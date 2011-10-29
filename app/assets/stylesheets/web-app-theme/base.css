@@ -54,7 +54,7 @@ body {
 
 #main {  
   width: 70%;
-  float: left;    
+  float: right;    
 }
 
 .actions-bar {
@@ -73,7 +73,7 @@ body {
 
 #sidebar {
   width: 25%;
-  float: right;      
+  float: left;      
 }
 
 #sidebar h3 {  

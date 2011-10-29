@@ -2,14 +2,14 @@
   <h3>Simple Block</h3>
   <div class="content">
     <p>Hello, <%= @user.email %></p>
-    <p><%= link_to "Edit", edit_user_registration_path %></p>
+    <p><%= link_to "Edit account", edit_user_registration_path %></p>
   </div>
 </div>
 
 <div class="block">
   <h3>Links</h3>
   <ul class="navigation">
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
+    <li><%= link_to 'Link 1', root_path %></li>
+    <li><%= link_to 'Link 2', root_path %></li>
   </ul>
 </div>

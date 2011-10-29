@@ -7,8 +7,7 @@ class ApplicationController < ActionController::Base
   
   def after_sign_out_path_for(resource_or_scope)	
     scope = Devise::Mapping.find_scope!(resource_or_scope)	
-    send(:"new_#{scope}_session_path")
-    	
+    send(:"new_#{scope}_session_path")    	
   end
 
 end

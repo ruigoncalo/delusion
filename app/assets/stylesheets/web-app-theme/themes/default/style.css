@@ -72,7 +72,7 @@ hr {
 
 #main {
   width: 77%;
-  float: left;
+  float: right;
 }
 #main .block {
   padding-top: 0px;
@@ -191,7 +191,7 @@ hr {
 
 #sidebar {
   width: 20%;
-  float: right;
+  float: left;
 }
 #sidebar .block {
   padding-top: 2px;
