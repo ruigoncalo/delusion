@@ -2,4 +2,8 @@ Welcome to Delusion HoneyPot.
 
 COMENTAR TUDO CRL, TUDO.
 
+não esquecer de migrar a base de dados - rake db:migrate 
+evitar ao máximo scaffolding
+
+
 More info soon...
