@@ -26,6 +26,7 @@
 body {
   color: #111111;
   background: #c4c4c4 url("images/bgd.jpg");
+  /*background-color: yellow;*/
   font-family: "MuseoSans500", helvetica, arial, sans-serif;
 }
 
@@ -48,18 +49,20 @@ hr {
   color: #dddddd;
 }
 
+/* TUDO O QUE DIZ RESPEITO AOS HEADERS*/
 #header {
   height: 80px;
   background-color: #333333;
+  background-image: url("images/backhoneypot.png");
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(255, 255, 255, 0.3);
   -moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 #header h1 {
-  padding: 15px 5px;
+  padding: 20px 60px;
   float: left;
-  font-size: 40px;
+  font-size: 22px;
   font-style: normal;
   text-transform: normal;
   letter-spacing: -1px;
@@ -67,8 +70,10 @@ hr {
   color: white;
 }
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
-  color: white;
+  /*color: #dedc17;*/
+  color: #d46e01;
 }
+/*-------------------------------------*/
 
 #main {
   width: 77%;
@@ -163,7 +168,7 @@ hr {
 
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
-  color: #eeeeee;
+  color: #d46e01; /*Cor do profile logout etc*/
 }
 #user-navigation ul li a:active img {
   margin-top: 1px;
@@ -194,12 +199,13 @@ hr {
   float: left;
 }
 #sidebar .block {
+  /*background-color: gray;*/
   padding-top: 2px;
   padding-bottom: 2px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); /* cuidado */
 }
 #sidebar .block h4 {
   font-weight: normal;
@@ -209,8 +215,8 @@ hr {
   color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0))); /* Gradiente */
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)); /* Gradiente do 'News' */
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -249,7 +255,7 @@ hr {
   text-shadow: 0 1px 0 white;
 }
 #sidebar ul li.active a {
-  color: #a4a4a4;
+  color: blue;
 }
 
 .control {
