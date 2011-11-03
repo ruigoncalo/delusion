@@ -1,13 +1,11 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <%= javascript_include_tag "graficos/highcharts.js" %>
 <%= javascript_include_tag "graficos/modules/exporting.js" %>
-
 <script type="text/javascript">
 	var chart;
 	$(document).ready(function() {
 		chart = new Highcharts.Chart({
 			chart: {
-				renderTo: 'contentor', 
+				renderTo: 'container', 
 				defaultSeriesType: 'scatter',
 				zoomType: 'xy'
 			},
@@ -83,12 +81,3 @@
 		});
 	});
 </script>
-
-<div class="block" id="block-text">  
-  <div class="content">
-  	<h2> Gráficos goes here! </h2>
-		<div id="contentor" style="width: 800px; height: 400px; margin: 0 auto"></div>
-  </div>
-</div>
-
-<% content_for :sidebar, render(:partial => 'sidebar') -%>

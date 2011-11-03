@@ -2,8 +2,34 @@
   <h3>News</h3>
   <div class="content">
     <p>Hello, <%= @user.email %></p>
-    <p><%= link_to "Edit account", edit_user_registration_path %></p>
   </div>
+</div>
+
+<div class="block notice">
+  <table id="hor-minimalist-a" summary="last search sheet">
+    <thead>
+	  <th scope="col">Last search</th>
+	  <th scope="col">Date</th>
+	  <th scope="col"></th>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>Type x</td>
+		<td><%= Time.now.to_date %></td>
+		<td><%= link_to 'edit', root_path %></td>
+	  </tr>
+	  <tr>
+		<td>Type y</td>
+		<td><%= Time.now.ago(100000).to_date %></td>
+		<td><%= link_to 'edit', root_path %></td>
+	  </tr>
+	  <tr>
+		<td>Type z</td>
+		<td><%= Time.now.ago(1000000).to_date %></td>
+		<td><%= link_to 'edit', root_path %></td>
+	  </tr>
+	</tbody>	
+  </table>
 </div>
 
 <div class="block">
@@ -13,3 +39,4 @@
     <li><%= link_to 'Gráficos', graficos_path %></li>
   </ul>
 </div>
+

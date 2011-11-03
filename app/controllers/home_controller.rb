@@ -3,4 +3,9 @@ class HomeController < ApplicationController
     @users = User.all
     @user = current_user
   end
+  
+  def graficos
+    @users = User.all
+    @user = current_user
+  end
 end
