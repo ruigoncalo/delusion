@@ -1,11 +1,19 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#clicame").click(function(){ $("#bnn2").slideToggle(); });
+});
+</script>
+
 <div class="block notice">
   <h3>News</h3>
   <div class="content">
     <p>Hello, <%= @user.email %></p>
+	<p id="clicame">hide/show last searches</p>
   </div>
 </div>
 
-<div class="block notice">
+<div id="bnn2" class="block notice">
   <table id="hor-minimalist-a" summary="last search sheet">
     <thead>
 	  <th scope="col">Last search</th>
