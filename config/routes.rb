@@ -1,4 +1,7 @@
 Delusion::Application.routes.draw do
-  devise_for :users
-  root :to => "home#index"
+  	devise_for :users
+
+    match '/graficos', :to => 'home#graficos'
+
+  	root :to => "home#index"
 end
