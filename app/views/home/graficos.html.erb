@@ -12,12 +12,12 @@
 				zoomType: 'xy'
 			},
 			title: {
-				text: 'Nível de perigo dos acessos'
+				text: 'Acess'
 			},
 			xAxis: {
 				title: {
 					enabled: true,
-					text: 'Tempo (h)'
+					text: 'Time'
 				},
 				startOnTick: true,
 				endOnTick: true,
@@ -25,7 +25,7 @@
 			},
 			yAxis: {
 				title: {
-					text: 'Perigo (0-10)'
+					text: 'Danger (0-10)'
 				}
 			},
 	
@@ -37,16 +37,18 @@
 						fontSize: '10px'
 				},
 				formatter: function() {
-            		    return 'Time: ' + Math.floor(this.x) + 'h ' + Math.round((this.x%1)*60) + 'm' + '<br />Perigo: <b>' + this.y + '</b><br />' + 
-						'<a href="' + this.series.name + '">Click for details</a>';
+            		    return 'Time: ' + Math.floor(this.x) + 'h ' 
+						+ Math.round((this.x%1)*60) + 'm' 
+						+ '<br />Danger: <b>' + this.y + '</b><br />' + 
+						'<a href="' + this.series.name + '">Click for details</a>';// + '<br />' + <%= @user.email %>;
 				}  
 			},
 			legend: {
 				layout: 'vertical',
 				align: 'left',
 				verticalAlign: 'top',
-				x: 100,
-				y: 70,
+				x: 48,
+				y: 10,
 				floating: true,
 				backgroundColor: '#FFFFFF',
 				borderWidth: 1
