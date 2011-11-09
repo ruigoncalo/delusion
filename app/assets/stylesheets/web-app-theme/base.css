@@ -498,8 +498,9 @@ button.button:active, a.button:active {
 	width: 19px;
 	height: 25px;
 	padding: 0 5px 0 0;
-	background: url(checkbox.gif) no-repeat;
+	background: blue;
 	display: block;
+	margin-left: 10px;
 	clear: left;
 	float: left;
 }
