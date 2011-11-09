@@ -17,26 +17,20 @@ $(document).ready(function(){
 <div id="bnn2" class="block notice">
   <table id="hor-minimalist-a" summary="last search sheet">
     <thead>
-	  <th scope="col">Last search</th>
+	  <th scope="col">Type</th>
 	  <th scope="col">Date</th>
+	  <th scope="col">User</th>
 	  <th scope="col"></th>
 	</thead>
 	<tbody>
+	<% @searches.last(4).each do |procu| %>
 	  <tr>
-		<td>Type x</td>
-		<td><%= Time.now.to_date %></td>
+		<td><%= procu.tipo %></td>
+		<td><%= procu.date %></td>
+		<td><%= procu.user_id %></td>
 		<td><%= link_to 'edit', root_path %></td>
 	  </tr>
-	  <tr>
-		<td>Type y</td>
-		<td><%= Time.now.ago(100000).to_date %></td>
-		<td><%= link_to 'edit', root_path %></td>
-	  </tr>
-	  <tr>
-		<td>Type z</td>
-		<td><%= Time.now.ago(1000000).to_date %></td>
-		<td><%= link_to 'edit', root_path %></td>
-	  </tr>
+	<% end %>
 	</tbody>	
   </table>
 </div>

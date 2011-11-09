@@ -7,5 +7,6 @@ class HomeController < ApplicationController
   def graficos
     @users = User.all
     @user = current_user
+	@searches = Search.all
   end
 end
