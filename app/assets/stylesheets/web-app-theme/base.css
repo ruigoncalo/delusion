@@ -453,3 +453,14 @@ button.button:active, a.button:active {
 	color: #009;
 }
 /* end of pretty tables */
+
+.checkbox {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	background: url(checkbox.gif) no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
