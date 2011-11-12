@@ -1,0 +1,108 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<%= javascript_include_tag "graficos/highcharts.js" %>
+<%= javascript_include_tag "graficos/modules/exporting.js" %>
+
+<script type="text/javascript">
+	var chart;
+
+	$(document).ready(function() {
+		chart = new Highcharts.Chart({
+			chart: {
+				renderTo: 'contentor',
+				defaultSeriesType: 'column'
+			},
+	
+			title: {
+				text: 'Average Danger Level'
+			},
+			
+			subtitle: {
+				text: 'Subtitle'
+			},
+
+			xAxis: {
+				categories: [
+					'IPs' 
+				]
+			},
+
+			yAxis: {
+				min: 0,
+				title: {
+					text: 'Danger (0-10)'
+				}
+			},
+
+			legend: {
+				layout: 'vertical',
+				backgroundColor: '#FFFFFF',
+				align: 'left',
+				verticalAlign: 'top',
+				x: 100,
+				y: 70,
+				floating: true,
+				shadow: true
+			},
+		
+			tooltip: {
+				formatter: function() {
+					return '' + this.x + ': ' + this.y + ' mm';
+				}
+			},
+
+			plotOptions: {
+				column: {
+					pointPadding: 0.2,
+					borderWidth: 0
+				}
+			},
+	
+			series: [
+				{
+					name: '195.234.134.174',
+					data: [7.1]
+				}, {
+					name: '129.42.38.1',
+					data: [3.2]
+				}, {
+					name: '213.15.0.3',
+					data: [4.1]
+				}, {
+					name: '209.85.169.105',
+					data: [2.8]
+				}, {
+					name: '69.171.229.11',
+					data: [9.3]
+				}
+			]
+		});
+	});
+</script>
+
+<div class="block" id="block-text">  
+  <div class="content">
+  	<h2> Column Charts! </h2>
+	<div class="inner" >
+		<div id="contentor" style=" width: 70%; height: 400px; margin: 0 auto;"></div>
+	</div>
+	<div class="inner" style=" width: 90%; height: 120px; margin: 0 auto; margin-bottom:15px;">
+			<div id=caixas class="nice_border" >
+				<input type="checkbox" id="checkbox-1"/><label for="checkbox-1">Ip Origem</label> 
+				<input type="checkbox" id="checkbox-2"/><label for="checkbox-2">Port</label> 
+				<input type="checkbox" id="checkbox-3"/><label for="checkbox-3">Danger</label> 
+				<input type="checkbox" id="checkbox-4"/><label for="checkbox-4">Ip Dest</label> 
+				<input type="checkbox" id="checkbox-5"/><label for="checkbox-5">TCP</label> 
+				<input type="checkbox" id="checkbox-6"/><label for="checkbox-6">UDP</label> 
+				<input type="checkbox" id="checkbox-7"/><label for="checkbox-7">ICMP</label> 
+				<input type="checkbox" id="checkbox-8"/><label for="checkbox-8">New</label> 
+				<input type="checkbox" id="checkbox-9"/><label for="checkbox-9">Bb</label> 
+				<input type="checkbox" id="checkbox-0"/><label for="checkbox-0">Xyz</label> 
+			</div>
+			<div id=botao class="nice_border" >
+				<input type="button" value="load graph"/>
+			</div>
+	</div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

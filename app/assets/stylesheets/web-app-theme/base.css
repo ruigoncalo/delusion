@@ -100,6 +100,22 @@ body {
   padding:10px;
 }
 
+#sidebar ul.nested-list li a:link, #sidebar ul.nested-list li a:visited {
+  padding: 5px 40px;
+  font-size: 10px;
+  background-image: none;
+  display: block; 
+  border-bottom: none;
+}
+
+#sidebar ul.nested-list li {
+  padding: 0px;
+  font-size: 10px;
+  background-image: none;
+  display: block; 
+  border-bottom: none;
+}
+
 #wrapper {
   padding-top: 20px;
 }
@@ -459,50 +475,32 @@ button.button:active, a.button:active {
 /* end of pretty tables */
 
 /*inicio de css para checkboxs e button*/
+.nice_border {
+	color: #fff;
+	padding: 20px;
+	background: #111;
+	border: 1px solid #000;
+	border-right: 1px solid #353535;
+	border-bottom: 1px solid #353535;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 #caixas {
 	width: 50%;
 	height: 100px;
 	padding: 6px 10px 6px 10px;
 	margin: 10px 10px 10px 10px;
 	float: left;
-	color: #fff;
-	padding: 20px;
-	background: #111;
-	border: 1px solid #000;
-	border-right: 1px solid #353535;
-	border-bottom: 1px solid #353535;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 
 #botao {
 	width: 25%;
 	height: 100px;
-	background-color: gray;
 	margin: 10px 10px 10px 10px;
 	padding: 6px 10px 6px 10px;
 	float: right;
-	color: #fff;
-	padding: 20px;
-	background: #111;
-	border: 1px solid #000;
-	border-right: 1px solid #353535;
-	border-bottom: 1px solid #353535;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.checkbox {
-	width: 19px;
-	height: 25px;
-	padding: 0 5px 0 0;
-	background: blue;
-	display: block;
-	margin-left: 10px;
-	clear: left;
-	float: left;
 }
 /*fim para css de checkboxs*/
 

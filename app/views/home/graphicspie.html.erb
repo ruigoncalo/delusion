@@ -1,0 +1,91 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<%= javascript_include_tag "graficos/highcharts.js" %>
+<%= javascript_include_tag "graficos/modules/exporting.js" %>
+
+<script type="text/javascript">
+	var chart;
+	
+	$(document).ready(function() {
+		chart = new Highcharts.Chart({
+			chart: {
+				renderTo: 'contentor',
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false
+			},
+
+			title: {
+				text: 'Port access'
+			},
+			
+			tooltip: {
+				formatter: function() {
+					return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+				}
+			},
+				
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					
+					dataLabels: {
+						enabled: true,
+						color: '#000000',
+						connectorColor: '#000000',
+						formatter: function() {
+							return '<b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 1) +'%';
+							//return '<b>'+ this.point.name +'</b>: '+ this.percentage +' uou%';
+						}
+					}
+				}
+			},
+			
+			series: [{
+				type: 'pie',
+				name: 'Browser share',
+				data: [
+						['80',   45.0],
+						['22',       26.0],
+						{   name: '3128',    
+							y: 12.8,
+							sliced: true,
+							selected: true
+						},
+						['20',    5.0],
+						['443',     6.0],
+						['1080',    5.0],
+						['Others',    10]
+				]
+			}]
+		});
+	});
+</script>
+
+<div class="block" id="block-text">  
+  <div class="content">
+  	<h2> Pie Charts! </h2>
+	<div class="inner" >
+		<div id="contentor" style=" width: 70%; height: 400px; margin: 0 auto;"></div>
+	</div>
+	<div class="inner" style=" width: 90%; height: 120px; margin: 0 auto; margin-bottom:15px;">
+			<div id=caixas class="nice_border" >
+				<input type="checkbox" id="checkbox-1"/><label for="checkbox-1">Ip Origem</label> 
+				<input type="checkbox" id="checkbox-2"/><label for="checkbox-2">Port</label> 
+				<input type="checkbox" id="checkbox-3"/><label for="checkbox-3">Danger</label> 
+				<input type="checkbox" id="checkbox-4"/><label for="checkbox-4">Ip Dest</label> 
+				<input type="checkbox" id="checkbox-5"/><label for="checkbox-5">TCP</label> 
+				<input type="checkbox" id="checkbox-6"/><label for="checkbox-6">UDP</label> 
+				<input type="checkbox" id="checkbox-7"/><label for="checkbox-7">ICMP</label> 
+				<input type="checkbox" id="checkbox-8"/><label for="checkbox-8">New</label> 
+				<input type="checkbox" id="checkbox-9"/><label for="checkbox-9">Bb</label> 
+				<input type="checkbox" id="checkbox-0"/><label for="checkbox-0">Xyz</label> 
+			</div>
+			<div id=botao class="nice_border" >
+				<input type="button" value="load graph"/>
+			</div>
+	</div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

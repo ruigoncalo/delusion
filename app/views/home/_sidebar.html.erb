@@ -4,6 +4,10 @@
 $(document).ready(function(){
 	$("#clicame").click(function(){ $("#bnn2").slideToggle(); });
 });
+
+$(document).ready(function(){
+	$("#escondido-1").click(function(){ $("#escondido-0").slideToggle(); });
+});
 </script>
 
 <div class="block notice">
@@ -39,7 +43,15 @@ $(document).ready(function(){
   <h3>Pesquisa</h3>
   <ul class="navigation">
     <li><%= link_to 'Tabelas', root_path %></li>
-    <li><%= link_to 'Gráficos', graficos_path %></li>
+    <li id="escondido-1">
+		<%= link_to 'Charts', graficos_path %>
+		<ul id="escondido-0" class="nested-list">
+			<li> <%= link_to 'Column type', graphicscolumns_path %> </li>
+			<li> <%= link_to 'Linear type', root_path %> </li>
+			<li> <%= link_to 'Area type', root_path %> </li>
+			<li> <%= link_to 'Pie type', graphicspie_path %> </li>
+		</ul>
+	</li>
   </ul>
 </div>
 
