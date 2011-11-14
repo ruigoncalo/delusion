@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#clicame").click(function(){ $("#bnn2").slideToggle(); });
@@ -50,7 +48,7 @@ $(document).ready(function(){
 		<a href="javascript:myfunction();">Charts</a>
 		<ul id="escondido-0" class="nested-list" style="display:none;">
 			<li> <%= link_to 'Column type', graphicscolumns_path %> </li>
-			<li> <%= link_to 'Linear type', graficos_path %> </li>
+			<li> <%= link_to 'Linear type', graphicslinear_path %> </li>
 			<li> <%= link_to 'Area type', graphicsarea_path %> </li>
 			<li> <%= link_to 'Pie type', graphicspie_path %> </li>
 		</ul>

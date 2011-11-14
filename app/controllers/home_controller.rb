@@ -26,7 +26,7 @@ class HomeController < ApplicationController
 	@searches = Search.all
   end
 
-  def graficos
+  def graphicslinear
     @users = User.all
     @user = current_user
 	save_search("Linear Chart")
