@@ -1,14 +1,6 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <%= javascript_include_tag "graficos/highcharts.js" %>
 <%= javascript_include_tag "graficos/modules/exporting.js" %>
-<% 
-  provse = Search.new
-  provse.tipo = "Linear chart"
-  provse.date = Time.now.to_datetime
-  provse.user_id = current_user.id
-  provse.atributos = "none"
-  provse.save
-%>
 
 <script type="text/javascript">
 	var chart;

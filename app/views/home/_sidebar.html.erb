@@ -15,7 +15,9 @@ $(document).ready(function(){
   <div class="content">
     <p>Hello, <%= @user.email %></p>
 	<p style="color: red; text-decoration:blink">Warning!</p>
-	<p id="clicame">hide/show last searches</p>
+	<p>
+		<a href="javascript:myfunction();" id="clicame">hide/show last searches</a>
+	</p>
   </div>
 </div>
 
@@ -49,7 +51,7 @@ $(document).ready(function(){
 		<ul id="escondido-0" class="nested-list" style="display:none;">
 			<li> <%= link_to 'Column type', graphicscolumns_path %> </li>
 			<li> <%= link_to 'Linear type', graficos_path %> </li>
-			<li> <%= link_to 'Area type', root_path %> </li>
+			<li> <%= link_to 'Area type', graphicsarea_path %> </li>
 			<li> <%= link_to 'Pie type', graphicspie_path %> </li>
 		</ul>
 	</li>
