@@ -44,10 +44,10 @@ $(document).ready(function(){
   <ul class="navigation">
     <li><%= link_to 'Tabelas', root_path %></li>
     <li id="escondido-1">
-		<%= link_to 'Charts', graficos_path %>
-		<ul id="escondido-0" class="nested-list">
+		<a href="javascript:myfunction();">Charts</a>
+		<ul id="escondido-0" class="nested-list" style="display:none;">
 			<li> <%= link_to 'Column type', graphicscolumns_path %> </li>
-			<li> <%= link_to 'Linear type', root_path %> </li>
+			<li> <%= link_to 'Linear type', graficos_path %> </li>
 			<li> <%= link_to 'Area type', root_path %> </li>
 			<li> <%= link_to 'Pie type', graphicspie_path %> </li>
 		</ul>
