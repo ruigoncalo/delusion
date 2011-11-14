@@ -166,9 +166,13 @@ hr {
   font-size: 14px;
 }
 
-#user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
+#user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:active {
   text-decoration: none;
   color: #d46e01; /*Cor do profile logout etc*/
+}
+#user-navigation ul li a:hover {
+  text-decoration: none;
+  font-weight:bold;
 }
 #user-navigation ul li a:active img {
   margin-top: 1px;
