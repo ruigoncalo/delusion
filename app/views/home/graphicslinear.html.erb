@@ -36,16 +36,12 @@
             		    return 'Time: ' + Math.floor(this.x) + 'h ' 
 						+ Math.round((this.x%1)*60) + 'm' 
 						+ '<br />Danger: <b>' + this.y + '</b><br />' + 
-						'<a href="' + this.series.name + '">Click for details</a>';// + '<br />' + <%= @user.email %>;
+						'<a href="' + this.series.name + '">Click for details</a>';
 				}  
 			},
 			legend: {
-				layout: 'vertical',
-				align: 'left',
-				verticalAlign: 'top',
-				x: 48,
-				y: 10,
-				floating: true,
+				align: 'center',
+				verticalAlign: 'bottom',
 				backgroundColor: '#FFFFFF',
 				borderWidth: 1
 			},

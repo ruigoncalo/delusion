@@ -28,23 +28,24 @@
 					text: 'Danger (0-10)'
 				}
 			},
+			
+			tooltip: {
+				style: {
+					padding: 5,
+					fontSize: '10px'
+				},
+				
+				formatter: function() {
+					return 'IP: ' + this.series.name + '<br />'
+					+ 'Danger: <b>' + this.y + '</b><br />'
+					+ '<a href="' + this.series.name + '">Click for details</a>';
+				},
+			},
 
 			legend: {
-				layout: 'vertical',
-				backgroundColor: '#FFFFFF',
-				align: 'left',
-				verticalAlign: 'top',
-				x: 100,
-				y: 70,
-				floating: true,
-				shadow: true
+				enabled: false
 			},
 		
-			tooltip: {
-				formatter: function() {
-					return '' + this.x + ': ' + this.y + ' mm';
-				}
-			},
 
 			plotOptions: {
 				column: {

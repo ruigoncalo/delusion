@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
-	$("#clicame").click(function(){ $("#bnn2").slideToggle(); });
+	$("#clicame").click(function(){ $("#bnn2").slideToggle(1000); });
 });
 
 $(document).ready(function(){
@@ -28,7 +28,7 @@ $(document).ready(function(){
 	  <th scope="col"></th>
 	</thead>
 	<tbody>
-	<% @searches.last(4).each do |procu| %>
+	<% @searches.last(10).each do |procu| %>
 	  <tr>
 		<td><%= procu.tipo %></td>
 		<td><%= procu.date %></td>
