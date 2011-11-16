@@ -1,9 +1,6 @@
 Welcome to Delusion HoneyPot.
 
-COMENTAR TUDO CRL, TUDO.
+Remember:
+> git clone https://ruigoncalo@github.com/ruigoncalo/delusion.git
+> rake db:migrate
 
-não esquecer de migrar a base de dados - rake db:migrate 
-evitar ao máximo scaffolding
-
-
-More info soon...
