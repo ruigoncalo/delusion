@@ -2,6 +2,12 @@
   <div class="content">
   	<h2> Graphs </h2>
 	
+	<div class="inner">
+	  <% @intrusions.each do |int|%>
+	  <p><%= int.ips %> : <%= int.alert %></p>
+	  <% end %>
+	</div>
+	
 	<div class="inner" id="submitcheck">
 	  <form class="formbox">
 	    <% @intrusionsAttribs.each do |key,value| %>
@@ -23,7 +29,7 @@
 	</div>
 	
 	<div class="inner">
-		<div id="contentor" style="height: 400px; margin: 0 auto;"></div>
+		<div id="contentor" style="height: 400px; margin: 20px auto;"></div>
 	</div>
 	
   </div>
@@ -32,7 +38,7 @@
 <% content_for :sidebar, render(:partial => 'sidebar') -%>
 
 <script type="text/javascript">
-    var rvalue = $("#rid").val();
+    var rvalue = $('#rid').val();
 	var chart;
 	$(":radio").click(function() {
 		chart = new Highcharts.Chart({
@@ -43,7 +49,7 @@
 				renderTo: 'contentor',
 				backgroundColor: '#FFFFFF',
 				shadow: true,
-				defaultSeriesType: 'column',
+				defaultSeriesType: 'line',
 				zoomType: 'xy'
 			},
 			credits: {
@@ -63,47 +69,19 @@
 				title: {
 					enabled: true,
 					text: rvalue
-				},
-				startOnTick: true,
-				endOnTick: true,
-				showLastLabel: true
+				}
 			},
 			yAxis: {
 				title: {
 					text: 'Alert'
 				}
 			},
-	
-			//Info quando se passa o rato por cima do ponto
-			tooltip: {
-				backgroundColor: '#FCFFC5',
-				style: {
-					    padding: 5,
-				}
-						fontSize: '10px'
-			},
-			plotOptions: {
-				scatter: {
-					marker: {
-						radius: 5,
-						states: {
-							hover: {
-								enabled: true,
-								lineColor: 'rgb(100,100,100)'
-							}
-						}
-					},
-					states: {
-						hover: {
-							marker: {
-								enabled: false
-							}
-						}
-					}
-				}
-			},
-			series: [{
-				data:[1,5,3,7,8,4,6]
+			series:[{
+				data: [
+				  <% @intrusions.each do |int| %>
+				  [<%= int.id %>, <%=int.alert %>]
+				  <% end %>
+				]
 			}]
 		});
     });

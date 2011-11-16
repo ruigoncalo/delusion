@@ -6,39 +6,39 @@ class HomeController < ApplicationController
   end
   
   def graphs
-     @users = User.all
-      @user = current_user
+    @users = User.all
+    @user = current_user
     @intrusions = Intrusion.all
   	@intrusionsAttribs = Intrusion.columns_hash
-  		@searches = Search.all
+  	@searches = Search.all
   end
   
   def graphicspie
     @users = User.all
     @user = current_user
-	save_search("Pie Chart")
-	@searches = Search.all
+	  save_search("Pie Chart")
+	  @searches = Search.all
   end
 
   def graphicscolumns
     @users = User.all
     @user = current_user
-	save_search("Column Chart")
-	@searches = Search.all
+	  save_search("Column Chart")
+	  @searches = Search.all
   end
 
   def graphicsarea
     @users = User.all
     @user = current_user
-	save_search("Area Chart")
-	@searches = Search.all
+	  save_search("Area Chart")
+	  @searches = Search.all
   end
 
   def graphicslinear
     @users = User.all  
-  @user = current_user
-	save_search("Linear Chart")
-	@searches = Search.all
+    @user = current_user
+	  save_search("Linear Chart")
+	  @searches = Search.all
   end
 
   private
