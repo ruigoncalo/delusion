@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ips: MyString
+  ports: 1
+  ipd: MyString
+  portd: 1
+  protocol: MyString
+  alert: 1
+  itime: 2011-11-16 11:33:02
+  ftime: 2011-11-16 11:33:02
+  local: MyString
+  cmd: MyString
+
+two:
+  ips: MyString
+  ports: 1
+  ipd: MyString
+  portd: 1
+  protocol: MyString
+  alert: 1
+  itime: 2011-11-16 11:33:02
+  ftime: 2011-11-16 11:33:02
+  local: MyString
+  cmd: MyString

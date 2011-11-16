@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109121754) do
+ActiveRecord::Schema.define(:version => 20111116113302) do
+
+  create_table "intrusions", :force => true do |t|
+    t.string   "ips"
+    t.integer  "ports"
+    t.string   "ipd"
+    t.integer  "portd"
+    t.string   "protocol"
+    t.integer  "alert"
+    t.datetime "itime"
+    t.datetime "ftime"
+    t.string   "local"
+    t.string   "cmd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "searches", :force => true do |t|
     t.string   "tipo"

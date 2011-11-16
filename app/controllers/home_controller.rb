@@ -2,7 +2,15 @@ class HomeController < ApplicationController
   def index
     @users = User.all
     @user = current_user
-	@searches = Search.all
+  	@searches = Search.all
+  end
+  
+  def graphs
+     @users = User.all
+      @user = current_user
+    @intrusions = Intrusion.all
+  	@intrusionsAttribs = Intrusion.columns_hash
+  		@searches = Search.all
   end
   
   def graphicspie
@@ -27,8 +35,8 @@ class HomeController < ApplicationController
   end
 
   def graphicslinear
-    @users = User.all
-    @user = current_user
+    @users = User.all  
+  @user = current_user
 	save_search("Linear Chart")
 	@searches = Search.all
   end

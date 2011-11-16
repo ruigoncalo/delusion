@@ -1,0 +1,110 @@
+<div class="block" id="block-text">  
+  <div class="content">
+  	<h2> Graphs </h2>
+	
+	<div class="inner" id="submitcheck">
+	  <form class="formbox">
+	    <% @intrusionsAttribs.each do |key,value| %>
+	      <% if value.name != "id" %>
+	      <% if value.name != "created_at" %> 
+	      <% if value.name != "updated_at" %>
+	      <div class="radio">
+		     <%= radio_button_tag 'attribute_name', value.name, false, :id => "rid" %>
+		     <%= label_tag value.name %>
+		  </div>
+		  <% end %>
+		  <% end %>
+		  <% end %>
+		<% end %>
+		 <div class="radio">
+	       <%= submit_tag "Render graph" %>
+	    </div>
+	  </form>
+	</div>
+	
+	<div class="inner">
+		<div id="contentor" style="height: 400px; margin: 0 auto;"></div>
+	</div>
+	
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>
+
+<script type="text/javascript">
+    var rvalue = $("#rid").val();
+	var chart;
+	$(":radio").click(function() {
+		chart = new Highcharts.Chart({
+			chart: {
+				marginRight: 30,
+				marginBottom: 100,
+				spacingTop: 30,
+				renderTo: 'contentor',
+				backgroundColor: '#FFFFFF',
+				shadow: true,
+				defaultSeriesType: 'column',
+				zoomType: 'xy'
+			},
+			credits: {
+		        enabled: false
+		    },
+			legend: {
+				layout: 'vertical',
+				align: 'center',
+				verticalAlign: 'bottom',
+				backgroundColor: '#FFFFFF',
+				borderWidth: 1
+			},
+			title: {
+				text: 'Graph'
+			},
+			xAxis: {
+				title: {
+					enabled: true,
+					text: rvalue
+				},
+				startOnTick: true,
+				endOnTick: true,
+				showLastLabel: true
+			},
+			yAxis: {
+				title: {
+					text: 'Alert'
+				}
+			},
+	
+			//Info quando se passa o rato por cima do ponto
+			tooltip: {
+				backgroundColor: '#FCFFC5',
+				style: {
+					    padding: 5,
+				}
+						fontSize: '10px'
+			},
+			plotOptions: {
+				scatter: {
+					marker: {
+						radius: 5,
+						states: {
+							hover: {
+								enabled: true,
+								lineColor: 'rgb(100,100,100)'
+							}
+						}
+					},
+					states: {
+						hover: {
+							marker: {
+								enabled: false
+							}
+						}
+					}
+				}
+			},
+			series: [{
+				data:[1,5,3,7,8,4,6]
+			}]
+		});
+    });
+</script>

@@ -504,3 +504,13 @@ button.button:active, a.button:active {
 }
 /*fim para css de checkboxs*/
 
+.formbox {
+	padding: 15px;
+}
+
+.radio {
+	clear: both;
+	float: left;
+	margin: 5px;
+}
+
