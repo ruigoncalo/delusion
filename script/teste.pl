@@ -51,10 +51,9 @@ my %comando = (
 );
 
 
-my $i = 1;
+my $i;
 
-#for($i = 0; $i < 10; $i++){
-while(1){
+for($i = 1; $i < 100; $i++){
 	my $min = (int(rand(40)));
 	my $hora = (int(rand(23)));
 	my $seg = (int(rand(59)));
@@ -72,5 +71,5 @@ while(1){
 		. $pais{int(rand(15)) + 1} . "\',\'"
 		. $comando{int(rand(11)) + 1} 
 		. "\',null,null)\"\n";
-	$i++;
+	
 }

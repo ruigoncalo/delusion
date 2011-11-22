@@ -9,7 +9,7 @@
 	      <% if value.name != "created_at" %> 
 	      <% if value.name != "updated_at" %>
 	      <div class="radio">
-		     <%= radio_button_tag 'attribute_name', value.name, false, :id => "id" %>
+		     <%= radio_button_tag "attrib_name", value.name %>
 		     <%= label_tag value.name %>
 		  </div>
 		  <% end %>
@@ -20,7 +20,8 @@
 	</div>
 	
 	<div class="inner">
-		<div id="contentor" style="height: 400px; margin: 20px auto;"></div>
+		<div id="rendergraph">
+		</div>
 	</div>
 	
   </div>
@@ -29,18 +30,18 @@
 <% content_for :sidebar, render(:partial => 'sidebar') -%>
 
 <script type="text/javascript">
-    var rvalue = $(":checked").val();
 	var chart;
-	$(":radio").click(function() {
+	var rvalue = $(":checked").val();
+	$(':radio').click(function() {
 		chart = new Highcharts.Chart({
 			chart: {
 				marginRight: 30,
 				marginBottom: 100,
 				spacingTop: 30,
-				renderTo: 'contentor',
+				renderTo: 'rendergraph',
 				backgroundColor: '#FFFFFF',
 				shadow: true,
-				defaultSeriesType: 'line',
+				defaultSeriesType: 'column',
 				zoomType: 'xy'
 			},
 			credits: {
