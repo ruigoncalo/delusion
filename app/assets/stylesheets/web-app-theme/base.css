@@ -190,6 +190,7 @@ body {
 }
 
 #footer {
+	padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -474,6 +475,11 @@ button.button:active, a.button:active {
 }
 /* end of pretty tables */
 
+/* warningbox */
+.warningbox {
+}
+
+
 /*inicio de css para checkboxs e button*/
 .nice_border {
 	color: #fff;
@@ -509,14 +515,6 @@ button.button:active, a.button:active {
 }
 
 .radio {
-	clear: both;
 	float: left;
 	margin: 5px;
-}
-
-/* graph content */
-.graph_content {
-	clear: both;
-	height: 400px; 
-	margin-top:100px;
 }
