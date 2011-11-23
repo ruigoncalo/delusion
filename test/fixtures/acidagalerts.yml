@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  agid: 1
+  agsid: 1
+  agcid: 1
+
+two:
+  agid: 1
+  agsid: 1
+  agcid: 1

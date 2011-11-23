@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  signame: MyString
+  sigclassid: 1
+  sigpriority: 1
+  sigrev: 1
+  sigsid: 1
+
+two:
+  signame: MyString
+  sigclassid: 1
+  sigpriority: 1
+  sigrev: 1
+  sigsid: 1

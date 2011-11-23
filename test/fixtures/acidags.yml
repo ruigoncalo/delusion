@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  agname: MyString
+  agdesc: MyString
+  agctime: 2011-11-16 14:50:41
+  agltime: 2011-11-16 14:50:41
+
+two:
+  agname: MyString
+  agdesc: MyString
+  agctime: 2011-11-16 14:50:41
+  agltime: 2011-11-16 14:50:41

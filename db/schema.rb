@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111116113302) do
+ActiveRecord::Schema.define(:version => 20111116145123) do
+
+  create_table "acidagalerts", :force => true do |t|
+    t.integer  "agid"
+    t.integer  "agsid"
+    t.integer  "agcid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "acidags", :force => true do |t|
+    t.string   "agname"
+    t.string   "agdesc"
+    t.datetime "agctime"
+    t.datetime "agltime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "sid"
+    t.integer  "signature"
+    t.datetime "timestamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "intrusions", :force => true do |t|
     t.string   "ips"
@@ -28,11 +53,52 @@ ActiveRecord::Schema.define(:version => 20111116113302) do
     t.datetime "updated_at"
   end
 
+  create_table "iphdrs", :force => true do |t|
+    t.integer  "sid"
+    t.integer  "cid"
+    t.integer  "ipsrc"
+    t.integer  "ipdst"
+    t.integer  "ipver"
+    t.integer  "iphlen"
+    t.integer  "iptos"
+    t.integer  "iplen"
+    t.integer  "ipid"
+    t.integer  "ipflags"
+    t.integer  "ipoff"
+    t.integer  "ipttl"
+    t.integer  "ipproto"
+    t.integer  "ipcsum"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "searches", :force => true do |t|
     t.string   "tipo"
     t.datetime "date"
     t.string   "atributos"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sensors", :force => true do |t|
+    t.string   "hostname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sigclasses", :force => true do |t|
+    t.string   "sigclassname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "signatures", :force => true do |t|
+    t.string   "signame"
+    t.integer  "sigclassid"
+    t.integer  "sigpriority"
+    t.integer  "sigrev"
+    t.integer  "sigsid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

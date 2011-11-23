@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sid: 1
+  cid: 1
+  ipsrc: 1
+  ipdst: 1
+  ipver: 1
+  iphlen: 1
+  iptos: 1
+  iplen: 1
+  ipid: 1
+  ipflags: 1
+  ipoff: 1
+  ipttl: 1
+  ipproto: 1
+  ipcsum: 1
+
+two:
+  sid: 1
+  cid: 1
+  ipsrc: 1
+  ipdst: 1
+  ipver: 1
+  iphlen: 1
+  iptos: 1
+  iplen: 1
+  ipid: 1
+  ipflags: 1
+  ipoff: 1
+  ipttl: 1
+  ipproto: 1
+  ipcsum: 1

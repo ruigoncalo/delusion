@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sid: 1
+  signature: 1
+  timestamp: 2011-11-16 14:43:20
+
+two:
+  sid: 1
+  signature: 1
+  timestamp: 2011-11-16 14:43:20
