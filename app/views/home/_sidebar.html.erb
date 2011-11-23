@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
-	$("#clicame").click(function(){ $("#bnn2").slideToggle(1000); });
+	$("#clicame").click(function(){ $("#bnn2").slideToggle(); });
 });
 
 $(document).ready(function(){
@@ -12,10 +12,7 @@ $(document).ready(function(){
   <h3>News</h3>
   <div class="content">
     <p>Hello, <%= @user.email %></p>
-	<p style="color: red; text-decoration:blink">Warning!</p>
-	<p>
-		<a href="javascript:myfunction();" id="clicame">hide/show last searches</a>
-	</p>
+	<a id="clicame">hide/show last searches</a>
   </div>
 </div>
 
@@ -28,12 +25,12 @@ $(document).ready(function(){
 	  <th scope="col"></th>
 	</thead>
 	<tbody>
-	<% @searches.last(10).each do |procu| %>
+	<% @searches.last(10).each do |s| %>
 	  <tr>
-		<td><%= procu.tipo %></td>
-		<td><%= procu.date %></td>
-		<td><%= procu.user_id %></td>
-		<td><%= link_to 'edit', root_path %></td>
+		<td><%= s.tipo %></td>
+		<td><%= s.date %></td>
+		<td><%= s.user_id %></td>
+		<td><%= link_to 'show', root_path %></td>
 	  </tr>
 	<% end %>
 	</tbody>	
@@ -41,19 +38,10 @@ $(document).ready(function(){
 </div>
 
 <div class="block">
-  <h3>Pesquisa</h3>
+  <h3>Search</h3>
   <ul class="navigation">
-    <li><%= link_to 'Tabelas', root_path %></li>
-    <li id="escondido-1">
-		<a href="javascript:myfunction();">Charts</a>
-		<ul id="escondido-0" class="nested-list" style="display:none;">
-			<li> <%= link_to 'Graphs', graphs_path %> </li>
-			<li> <%= link_to 'Column type', graphicscolumns_path %> </li>
-			<li> <%= link_to 'Linear type', graphicslinear_path %> </li>
-			<li> <%= link_to 'Area type', graphicsarea_path %> </li>
-			<li> <%= link_to 'Pie type', graphicspie_path %> </li>
-		</ul>
-	</li>
+    <li><%= link_to 'Tables', root_path %></li>
+    <li> <%= link_to 'Graphs', graphs_path %> </li>
   </ul>
 </div>
 

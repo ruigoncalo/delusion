@@ -91,7 +91,7 @@ body {
   padding: 0 15px;
 }
 
-#sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
+#sidebar ul.navigation li, #sidebar ul.navigation li a:visited {
   display: block;
   padding: 10px 15px;
 }
@@ -190,6 +190,7 @@ body {
 }
 
 #footer {
+	padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -474,6 +475,11 @@ button.button:active, a.button:active {
 }
 /* end of pretty tables */
 
+/* warningbox */
+.warningbox {
+}
+
+
 /*inicio de css para checkboxs e button*/
 .nice_border {
 	color: #fff;
@@ -509,8 +515,6 @@ button.button:active, a.button:active {
 }
 
 .radio {
-	clear: both;
 	float: left;
 	margin: 5px;
 }
-
